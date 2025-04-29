@@ -9,14 +9,46 @@ Algorithm:
 4.	Call the search function and perform other linked list operations as needed.
  
 Program:
+```
 
-//type your code here
-
+struct Node{ 
+struct Node *next; 
+char data; 
+}*head; 
+void search(char data) 
+{ 
+struct Node *ptr; 
+char item=data; 
+int i=0,flag; 
+ptr = head; 
+if(ptr == 
+NULL) 
+{ 
+printf("Empty List\n"); 
+} 
+else 
+{ 
+while (ptr!=NULL) 
+{ 
+if(ptr->data == item) 
+{ 
+printf("item %c found at location %d ",item,i+1); 
+flag=0; 
+} 
+i++; 
+ptr = ptr -> next; 
+} 
+if(flag!=0) 
+{ 
+printf("Item not found\n"); 
+} 
+} 
+ 
+}
+```
 Output:
 
-//paste your output here
-
-
+![Screenshot 2025-04-25 110656](https://github.com/user-attachments/assets/aa041a85-47ba-4c7a-b02c-f0601ec173d2)
 
 Result:
 Thus, the program to search a given element in the given linked list is verified successfully.
@@ -33,14 +65,39 @@ Algorithm:
 4.	Call the insert function and perform other linked list operations as needed.
  
 Program:
-
-//type your code here
-
+```
+struct Node{ 
+char data; 
+struct Node *next; 
+}*head; 
+ 
+void insert(char data) 
+{ 
+struct Node *n=(struct Node*)malloc(sizeof(struct Node)); 
+struct Node *temp; 
+if(head==NULL) 
+{ 
+head=n; 
+n->data=data; 
+n
+>next=NULL; 
+temp=head; 
+return; 
+} 
+while(temp->next!=NULL) 
+{ 
+temp=temp->next; 
+} 
+n->data=data; 
+n
+>next=NULL; 
+temp->next=n; 
+}
+```
 Output:
 
-//paste your output here
+![Screenshot 2025-04-25 110757](https://github.com/user-attachments/assets/9bea298a-c922-43eb-97aa-2927af2aad44)
 
- 
 Result:
 Thus, the program to insert a node in a linked list is verified successfully.
 
@@ -57,13 +114,27 @@ Algorithm:
 4.	Move to the next node by updating the temp pointer to point to the next node (temp = temp->next).
  
 Program:
-
-//type your code here
-
+```
+struct Node 
+{ 
+struct Node *prev; 
+struct Node *next; 
+int data; 
+}*head; 
+void display() 
+{ 
+struct Node *temp; 
+temp=head; 
+while(temp!=0) 
+{ 
+printf("%d ",temp->data); 
+temp=temp->next; 
+} 
+} 
+```
 Output:
 
-//paste your output here
-
+![Screenshot 2025-04-25 110844](https://github.com/user-attachments/assets/972e6355-aa17-4951-b13c-106bd1163b27)
 
 Result:
 Thus, the program to traverse a doubly linked list is verified successfully. 
@@ -82,24 +153,52 @@ Algorithm:
 5.	Set the new node's prev pointer to the last node and update the last node's next pointer to the new node.
  
 Program:
+```
+struct Node 
+{ 
+struct Node *prev; 
+struct Node *next; 
+float data; 
+}*head; 
+void insert(float data) 
+{ 
+ 
+struct Node *n=(struct Node*)malloc(sizeof(struct Node)); 
+struct Node *temp; 
+if(head==NULL) 
+{ 
+head=n; 
+n->data=data; 
+n
+>next=NULL; 
+n
+>prev=NULL; 
+temp=head; 
+} 
+else 
+{ 
+while(temp->next!=NULL) 
+{ 
+temp=temp->next; 
+} 
+n->data=data; 
+n
+>next=NULL; 
+n->prev=temp; 
+temp->next=n; 
+} 
+}
 
-//type your code here
-
+```
 Output:
 
-//paste your output here
+![Screenshot 2025-04-25 110935](https://github.com/user-attachments/assets/921b352c-1ba7-4946-9fcf-797b26d1853c)
 
 
 Result:
 Thus, the program to insert an element in doubly linked list is verified successfully.
 
-
-
-
 EXP NO:20 C FUNCTION TO DELETE A GIVEN ELEMENT IN THE GIVEN LINKED LIST
-
-
-
 
 Aim:
 To write a C function that deletes a given element from a linked list.
@@ -122,23 +221,38 @@ o	Free the memory allocated to the node to be deleted.
 o	If the element is not found in any node, print a message indicating the element is not present in the list.
 6.	End the Function.
 
-
 Program:
-
-//type your code here
+```
+ 
+struct Node{ 
+    char data;  
+    struct Node *next; 
+}*head; 
+void delete() 
+{ 
+    if(head==NULL){ 
+        printf("List is empty\n"); 
+        return; 
+    } 
+    else if(head->next==NULL){ 
+        head=NULL; 
+        free(head); 
+        printf("Node deleted from the begining ...\n"); 
+    }
+ else{ 
+        struct Node *ptr; 
+        ptr=head; 
+        head=head->next; 
+        free(ptr); 
+        printf("Node deleted from the begining ...\n"); 
+    } 
+} 
+```
 
 Output:
 
-//paste your output here
-
-
-
+![Screenshot 2025-04-25 111032](https://github.com/user-attachments/assets/f100cbc3-8cbe-4f52-9b23-f0a8315f02c8)
 
 
 Result:
 Thus, the function that deletes a given element from a linked list is verified successfully.
-
-
-
-
-
