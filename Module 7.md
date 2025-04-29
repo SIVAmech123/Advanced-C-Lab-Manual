@@ -15,6 +15,7 @@ Else
 6.	Return 0
  
 Program:
+```
 
 #include<stdio.h> 
 struct eligib 
@@ -37,6 +38,7 @@ else
 printf("Age:%d\nName:%svaccine:%d\neligibility:yes",e.age,e.n,e.age); 
  
 }
+```
 
 
 Output:
@@ -62,7 +64,7 @@ Algorithm:
 7.	Return 0
  
 Program:
-
+```
 #include<stdio.h> 
 struct numbers 
 { 
@@ -80,7 +82,7 @@ int add(struct numbers n)
 { 
 return n.a+n.b; 
 }
-
+```
 
 Output:
 
@@ -116,7 +118,7 @@ Use scanf to input the file name into the name array.
  
 Program:
 
-
+```
 #include <stdio.h> 
 int main() 
 { 
@@ -129,6 +131,7 @@ printf("\n%s File Opened",name);
 fclose(p); 
 printf("\n%s File Closed",name); 
 }
+```
 
 
 Output:
@@ -161,7 +164,7 @@ Use scanf to input the file name into the name array and the number of strings i
 5.	Return 0 to indicate successful program execution.
  
 Program:
-
+```
  
 #include <stdio.h> 
 int main() 
@@ -182,7 +185,7 @@ printf("\nData added Successfully");
  
 }
 
-
+```
 Output:
 
 ![Screenshot 2025-04-25 103716](https://github.com/user-attachments/assets/71c7803b-1c9f-49f1-8cf0-33053ba0775c)
@@ -225,7 +228,7 @@ Algorithm:
 13.End the program by returning 0.
 
 Program:
- 
+ ```
 #include <stdio.h> 
 #include <stdlib.h> 
 struct Subject 
@@ -256,7 +259,7 @@ int main()
      
     return 0; 
 }
-
+```
 Output:
 ![Screenshot 2025-04-25 103835](https://github.com/user-attachments/assets/ade5489a-1669-4758-9d23-fb791b78794d)
 
